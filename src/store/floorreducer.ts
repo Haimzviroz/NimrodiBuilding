@@ -12,7 +12,7 @@ const floorSlice = createSlice({
   name: "floor",
   initialState,
   reducers: {
-    changeAccessByindex: (state, action: PayloadAction<number>) => {
+    changeAccess: (state, action: PayloadAction<number>) => {
       const floorIndex = action.payload;
       if (floorIndex >= 0 && floorIndex < state.floors.length) {
         state.floors[floorIndex] = !state.floors[floorIndex];
@@ -21,5 +21,5 @@ const floorSlice = createSlice({
   },
 });
 
-export const { changeAccessByindex: changeAccess } = floorSlice.actions;
+export const { changeAccess: changeAccess } = floorSlice.actions;
 export default floorSlice.reducer;

@@ -12,6 +12,7 @@ const Layout: React.FC = () => {
       };
     }) => state.floorAccess.floorAccess
   );
+  console.log(floorAccess);
   const { getFloorByIndex } = useBuildingData();
 
   return (
